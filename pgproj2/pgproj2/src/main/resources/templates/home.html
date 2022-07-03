@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Welcome</title>
+</head>
+<body style="text-align: center; font-family:consolas; padding:20px;">
+<h1>Welcome to CS307!</h1>
+<h2>Author: CTL, CJY</h2>
+<p></p>
+
+
+
+
+<p>Click <a th:href="@{/hello}" style="color:#FF1CAE;">0x0</a> to start.</p>
+</body>
+
+<style type="text/css">
+	body{
+		background: url("https://pic.imgdb.cn/item/62942c10094754312967d1cc.jpg") no-repeat center center fixed;
+        /*兼容浏览器版本*/
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+	}
+</style>
+
+</html>

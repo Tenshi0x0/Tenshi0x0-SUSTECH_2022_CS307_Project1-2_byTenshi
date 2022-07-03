@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Log in</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Login</h1>
+    <div style="text-align: center;" th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div style="text-align: center;" th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form th:action="@{/login}" method="post">
+        <div style="text-align: center;"><label> User Name : <input type="text" name="username"/> </label></div>
+        <div style="text-align: center;"><label> Password: <input type="password" name="password"/> </label></div>
+        <div style="text-align: center;"><input type="submit" value="Sign In"/></div>
+    </form>
+
+    <style type="text/css">
+        body{
+            background: url("https://pic.imgdb.cn/item/62942c10094754312967d1cc.jpg") no-repeat center center fixed;
+            /*兼容浏览器版本*/
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</body>
+</html>

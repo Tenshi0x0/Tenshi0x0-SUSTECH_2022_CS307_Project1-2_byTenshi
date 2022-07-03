@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Home</title>
+</head>
+<body style="text-align: center;">
+    <h1 style="text-align: center; color:#007FFF;" th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+    <p style="font-family:fira code; color:#007FFF; padding:20px;"><a th:href="@{/thymeleaf/upload}">Upload</a>: Upload the csv file.</p>
+    <p style="font-family:fira code; color:#FF1CAE; padding:20px;"><a th:href="@{/thymeleaf/query}">Query</a>: Enter queries or problem id.</p>
+
+    <form style="text-align: center;" th:action="@{/logout}" method="post">
+        <input style="font-family:fira code; color:#007FFF; padding:5px;" type="submit" value="Sign Out"/>
+    </form>
+
+    <style type="text/css">
+        body{
+            -webkit-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            background-color: rgba(220,38,38,0.2);
+        }
+    </style>
+</body>
+</html>
